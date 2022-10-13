@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [ ! -e "$HOME/.cache/wal/colors" ]; then
+		cli-visualizer
+		exit 0
+fi
+
 get_and_sort_wal_colors () {
 
     # read wal colors in
@@ -27,4 +32,4 @@ get_and_sort_wal_colors () {
 PATH="/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/"
 
 # run vis
-vis 
+cli-visualizer
